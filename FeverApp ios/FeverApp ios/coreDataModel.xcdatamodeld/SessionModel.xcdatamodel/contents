@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22758" systemVersion="23E214" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Confidence_levelLocal" representedClassName=".Confidence_levelLocal" syncable="YES">
+        <attribute name="confidenceLevel" optional="YES" attributeType="String"/>
+        <attribute name="confidenceLevelId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isConfidenceLevelSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isConfidenceLevelUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineConfidenceLevelId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="timeOfObservation" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="confidenceLevel" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="Contact_with_doctorLocal" representedClassName=".Contact_with_doctorLocal" syncable="YES">
+        <attribute name="contactWithDoctorId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="dateOfContact" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="doctorDiagnoses" optional="YES" attributeType="Transformable"/>
+        <attribute name="doctorsPrescriptionsIssued" optional="YES" attributeType="Transformable"/>
+        <attribute name="doctorsRecommendationMeasures" optional="YES" attributeType="String"/>
+        <attribute name="hasHadMedicalContact" optional="YES" attributeType="String"/>
+        <attribute name="isContactWithDoctorSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isContactWithDoctorUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineContactWithDoctorId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="otherDiagnosis" optional="YES" attributeType="String"/>
+        <attribute name="otherPrescriptionsIssued" optional="YES" attributeType="String"/>
+        <attribute name="otherReasonForContact" optional="YES" attributeType="String"/>
+        <attribute name="reasonForContact" optional="YES" attributeType="Transformable"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="contactWithDoctor" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="DiarrheaLocal" representedClassName=".DiarrheaLocal" syncable="YES">
+        <attribute name="diarrheaAndOrVomiting" optional="YES" attributeType="String"/>
+        <attribute name="diarrheaId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isDiarrheaSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isDiarrheaUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="observationTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="onlineDiarrheaId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="diarrhea" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="Entry_medications" representedClassName=".Entry_medications" syncable="YES">
+        <attribute name="activeIngredientQuantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="amountAdministered" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="basisOfDecision" optional="YES" attributeType="String"/>
+        <attribute name="dateOfAdministration" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="entryMedicationOnlineId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isEntryMedicationSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isEntryMedicationUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="medicationEntryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="medicationName" optional="YES" attributeType="String"/>
+        <attribute name="reasonForAdministration" optional="YES" attributeType="String"/>
+        <attribute name="timeOfAdministration" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="typeOfMedication" optional="YES" attributeType="String"/>
+        <attribute name="userMedicationId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="medicationLocal" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicationsLocal" inverseName="entryMedications" inverseEntity="MedicationsLocal"/>
+    </entity>
+    <entity name="FeedbackLocal" representedClassName=".FeedbackLocal" syncable="YES">
+        <attribute name="confidenceImpact" optional="YES" attributeType="String"/>
+        <attribute name="designSatisfaction" optional="YES" attributeType="String"/>
+        <attribute name="feedbackId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="generalSatisfaction" optional="YES" attributeType="String"/>
+        <attribute name="improvementSuggestions" optional="YES" attributeType="String"/>
+        <attribute name="positiveAspects" optional="YES" attributeType="String"/>
+        <attribute name="usabilitySatisfaction" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="FeverCrampsEntity" representedClassName=".FeverCrampsEntity" syncable="YES">
+        <attribute name="feverCrampsDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="feverCrampsDescription" optional="YES" attributeType="String"/>
+        <attribute name="feverCrampsId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="feverCrampsOnlineId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="feverCrampsTime" optional="YES" attributeType="String"/>
+        <attribute name="isFeverCrampsSynced" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profileId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="FeverPhaseLocal" representedClassName=".FeverPhaseLocal" syncable="YES">
+        <attribute name="feverPhaseEndDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="feverPhaseId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="feverPhaseStartDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="groupDate" optional="YES" attributeType="String"/>
+        <attribute name="isFeverPhaseSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineFeverPhaseId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profileId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="localEntry" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="feverPhase" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="LiquidsLocal" representedClassName=".LiquidsLocal" syncable="YES">
+        <attribute name="dehydrationSigns" optional="YES" attributeType="Transformable"/>
+        <attribute name="isLiquidSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isLiquidUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="liquidId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="liquidTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="onlineLiquidId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="liquids" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="LocalAlarm" representedClassName=".LocalAlarm" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="end" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="frequency" optional="YES" attributeType="String"/>
+        <attribute name="isAutomaticRepeatEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isReminderEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="notificationPeriod" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+    </entity>
+    <entity name="LocalEntry" representedClassName=".LocalEntry" syncable="YES">
+        <attribute name="belongsToAFeverPhase" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="entryDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="entryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="feverPhaseId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="feverPhaseIdOnline" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isdeleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isEntrySynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isEntryUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineEntryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profileId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="confidenceLevel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Confidence_levelLocal" inverseName="localEntry" inverseEntity="Confidence_levelLocal"/>
+        <relationship name="contactWithDoctor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Contact_with_doctorLocal" inverseName="localEntry" inverseEntity="Contact_with_doctorLocal"/>
+        <relationship name="diarrhea" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DiarrheaLocal" inverseName="localEntry" inverseEntity="DiarrheaLocal"/>
+        <relationship name="feverPhase" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FeverPhaseLocal" inverseName="localEntry" inverseEntity="FeverPhaseLocal"/>
+        <relationship name="liquids" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LiquidsLocal" inverseName="localEntry" inverseEntity="LiquidsLocal"/>
+        <relationship name="measures" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeasuresLocal" inverseName="localEntry" inverseEntity="MeasuresLocal"/>
+        <relationship name="medications" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MedicationsLocal" inverseName="localEntry" inverseEntity="MedicationsLocal"/>
+        <relationship name="notes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NotesLocal" inverseName="localEntry" inverseEntity="NotesLocal"/>
+        <relationship name="pains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PainLocal" inverseName="localEntry" inverseEntity="PainLocal"/>
+        <relationship name="rash" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="RashLocal" inverseName="localEntry" inverseEntity="RashLocal"/>
+        <relationship name="stateOfHealth" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StateOfHealthLocal" inverseName="localEntry" inverseEntity="StateOfHealthLocal"/>
+        <relationship name="symptoms" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SymptomsLocal" inverseName="localEntry" inverseEntity="SymptomsLocal"/>
+        <relationship name="temperature" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TemperatureLocal" inverseName="localEntry" inverseEntity="TemperatureLocal"/>
+        <relationship name="warningSigns" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WarningSignsLocal" inverseName="localEntry" inverseEntity="WarningSignsLocal"/>
+    </entity>
+    <entity name="MeasuresLocal" representedClassName=".MeasuresLocal" syncable="YES">
+        <attribute name="isMeasuresSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isMeasuresUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="measureId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="measures" optional="YES" attributeType="Transformable"/>
+        <attribute name="measureTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="onlineMeasuresId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="otherMeasures" optional="YES" attributeType="String"/>
+        <attribute name="takeMeasures" optional="YES" attributeType="String"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="measures" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="MedicationsLocal" representedClassName=".MedicationsLocal" syncable="YES">
+        <attribute name="hasTakenMedication" optional="YES" attributeType="String"/>
+        <attribute name="isMedicationsSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isMedicationsUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="medicationEntryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="medicationList" optional="YES" attributeType="Transformable"/>
+        <attribute name="onlineMedicationsId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="entryMedications" optional="YES" toMany="YES" minCount="1" maxCount="143" deletionRule="Nullify" destinationEntity="Entry_medications" inverseName="medicationLocal" inverseEntity="Entry_medications"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="medications" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="NotesLocal" representedClassName=".NotesLocal" syncable="YES">
+        <attribute name="isNotesSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isNotesUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="noteId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="notesContent" optional="YES" attributeType="String"/>
+        <attribute name="notesOtherObservations" optional="YES" attributeType="String"/>
+        <attribute name="notesTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="onlineNotesId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="notes" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="PainLocal" representedClassName=".PainLocal" syncable="YES">
+        <attribute name="isPainSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isPainUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlinePainId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="otherPlaces" optional="YES" attributeType="String"/>
+        <attribute name="painDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="painId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="painSeverityScale" optional="YES" attributeType="String"/>
+        <attribute name="painValue" optional="YES" attributeType="Transformable"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="pains" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="Profile" representedClassName=".Profile" syncable="YES">
+        <attribute name="chronicDiseases" optional="YES" attributeType="Transformable"/>
+        <attribute name="doctorReferenceNumber" optional="YES" attributeType="String"/>
+        <attribute name="feverFrequency" optional="YES" attributeType="String"/>
+        <attribute name="feverPhases" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="hadFeverSeizure" optional="YES" attributeType="String"/>
+        <attribute name="hasChronicDisease" optional="YES" attributeType="String"/>
+        <attribute name="hasTakenAntipyretics" optional="YES" attributeType="String"/>
+        <attribute name="isSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineProfileId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profileColor" optional="YES" attributeType="String"/>
+        <attribute name="profileDateOfBirth" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="profileGender" optional="YES" attributeType="String"/>
+        <attribute name="profileHeight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="profileId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profileName" optional="YES" attributeType="String"/>
+        <attribute name="profilePediatricianId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profileWeight" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="wayOfDealingWithFeverSeizures" optional="YES" attributeType="String"/>
+        <attribute name="willingnessToBeRandomized" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="RashLocal" representedClassName=".RashLocal" syncable="YES">
+        <attribute name="isRashSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isRashUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineRashId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rashes" optional="YES" attributeType="Transformable"/>
+        <attribute name="rashId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rashTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="rash" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="Session" representedClassName=".Session" syncable="YES">
+        <attribute name="end_time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="last_activity_time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="start_time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <relationship name="sessionData" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SessionData" inverseName="session" inverseEntity="SessionData"/>
+    </entity>
+    <entity name="SessionData" representedClassName=".SessionData" syncable="YES">
+        <attribute name="data_protection_agreement_accepted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="default_country" optional="YES" attributeType="String"/>
+        <attribute name="default_language" optional="YES" attributeType="String"/>
+        <attribute name="disclaimer_accepted" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="intro_video_statistics" optional="YES" attributeType="String"/>
+        <attribute name="selected_country" optional="YES" attributeType="String"/>
+        <attribute name="selected_language" optional="YES" attributeType="String"/>
+        <attribute name="session_id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="session" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="sessionData" inverseEntity="Session"/>
+    </entity>
+    <entity name="StateOfHealthLocal" representedClassName=".StateOfHealthLocal" syncable="YES">
+        <attribute name="isStateOfHealthSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isStateOfHealthUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineStateOfHealthId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="stateOfHealth" optional="YES" attributeType="String"/>
+        <attribute name="stateOfHealthDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="stateOfHealthId" optional="YES" attributeType="Integer 64" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="stateOfHealth" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="SymptomsLocal" representedClassName=".SymptomsLocal" syncable="YES">
+        <attribute name="isSymptomsSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isSymptomsUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineSymptomsId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="otherSymptoms" optional="YES" attributeType="Transformable"/>
+        <attribute name="symptoms" optional="YES" attributeType="Transformable"/>
+        <attribute name="symptomsId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="symptomsTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="symptoms" inverseEntity="LocalEntry"/>
+    </entity>
+    <entity name="TemperatureLocal" representedClassName=".TemperatureLocal" syncable="YES">
+        <attribute name="isTemperatureSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isTemperatureUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineTemperatureId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="temperatureComparedToForehead" optional="YES" attributeType="String"/>
+        <attribute name="temperatureDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="temperatureId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="temperatureMeasurementLocation" optional="YES" attributeType="String"/>
+        <attribute name="temperatureMeasurementUnit" optional="YES" attributeType="String"/>
+        <attribute name="temperatureValue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="wayOfDealingWithTemperature" optional="YES" attributeType="String"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="temperature" inverseEntity="LocalEntry"/>
+        <relationship name="vaccination" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VaccinationLocal" inverseName="temperature" inverseEntity="VaccinationLocal"/>
+    </entity>
+    <entity name="User_medications" representedClassName=".User_medications" syncable="YES">
+        <attribute name="activeIngredientQuantity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="amountAdministered" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="basisOfDecision" optional="YES" attributeType="String"/>
+        <attribute name="dateOfAdministration" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="isupdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isUserMedicationsSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="medicationEntryId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="medicationId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="medicationName" optional="YES" attributeType="String"/>
+        <attribute name="onlineUserMedicationsId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reasonForAdministration" optional="YES" attributeType="String"/>
+        <attribute name="timeOfAdministration" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="typeOfMedication" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="User_pediatricians" representedClassName=".User_pediatricians" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String"/>
+        <attribute name="country" optional="YES" attributeType="String"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="pediatricianId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String"/>
+        <attribute name="postalCode" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="reference" optional="YES" attributeType="String"/>
+        <attribute name="streetAndHouseNumber" optional="YES" attributeType="String"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="UserContactInfoEntity" representedClassName=".UserContactInfoEntity" syncable="YES">
+        <attribute name="contactInfoId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="email" optional="YES" attributeType="String"/>
+        <attribute name="isSync" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="phonenumber" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="UserDataEntity" representedClassName=".UserDataEntity" syncable="YES">
+        <attribute name="currentLanguage" optional="YES" attributeType="String"/>
+        <attribute name="familyCode" optional="YES" attributeType="String"/>
+        <attribute name="languageCode" optional="YES" attributeType="String"/>
+        <attribute name="profileDateOfBirth" optional="YES" attributeType="String"/>
+        <attribute name="profileGender" optional="YES" attributeType="String"/>
+        <attribute name="profileId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profileName" optional="YES" attributeType="String"/>
+        <attribute name="profileOnlineId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="userId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="UserPersonalInformationEntity" representedClassName=".UserPersonalInformationEntity" syncable="YES">
+        <attribute name="countryOfResidence" optional="YES" attributeType="String"/>
+        <attribute name="educationalLevel" optional="YES" attributeType="String"/>
+        <attribute name="familyRole" optional="YES" attributeType="String"/>
+        <attribute name="isSync" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="nationality" optional="YES" attributeType="String"/>
+        <attribute name="personalInfoId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="postcode" optional="YES" attributeType="String"/>
+        <attribute name="userFirstName" optional="YES" attributeType="String"/>
+        <attribute name="userLastName" optional="YES" attributeType="String"/>
+        <attribute name="userYearOfBirth" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="VaccinationLocal" representedClassName=".VaccinationLocal" syncable="YES">
+        <attribute name="isVaccinationSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isVaccinationUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineVaccinationId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vaccinatedLast2WeeksOrNot" optional="YES" attributeType="String"/>
+        <attribute name="vaccinationDateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="vaccinationId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="vaccineReceived" optional="YES" attributeType="Transformable" valueTransformerName=""/>
+        <relationship name="temperature" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TemperatureLocal" inverseName="vaccination" inverseEntity="TemperatureLocal"/>
+    </entity>
+    <entity name="WarningSignsLocal" representedClassName=".WarningSignsLocal" syncable="YES">
+        <attribute name="isWarningSignsSynced" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="isWarningSignsUpdated" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="onlineWarningSignsId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="warningSigns" optional="YES" attributeType="Transformable"/>
+        <attribute name="warningSignsId" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="warningSignsTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="localEntry" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LocalEntry" inverseName="warningSigns" inverseEntity="LocalEntry"/>
+    </entity>
+</model>

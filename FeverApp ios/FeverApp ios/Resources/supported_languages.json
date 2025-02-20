@@ -1,0 +1,73 @@
+[
+    {
+        "languageName": "German",
+        "languageCode": "de",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "English",
+        "languageCode": "en",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Russian",
+        "languageCode": "ru",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Arabic",
+        "languageCode": "ar",
+        "direction": "rtl"
+    },
+    {
+        "languageName": "Farsi",
+        "languageCode": "fa",
+        "direction": "rtl"
+    },
+    {
+        "languageName": "Turkish",
+        "languageCode": "tr",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "French",
+        "languageCode": "fr",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Italian",
+        "languageCode": "it",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Polish",
+        "languageCode": "pl",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Dutch",
+        "languageCode": "nl",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Spanish",
+        "languageCode": "es",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Portuguese",
+        "languageCode": "pt",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Ukrainian",
+        "languageCode": "uk",
+        "direction": "ltr"
+    },
+    {
+        "languageName": "Georgian",
+        "languageCode": "ka (georgisch)",
+        "direction": "ltr"
+    }
+]
+
